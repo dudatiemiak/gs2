@@ -3,7 +3,7 @@ package br.com.fiap.to;
 import jakarta.validation.constraints.*;
 
 public class UsuarioTO {
-    private Long id_usario;
+    private Long id_usuario;
     @NotBlank
     private String nome;
     @NotBlank
@@ -21,7 +21,7 @@ public class UsuarioTO {
     }
 
     public UsuarioTO(Long id_usario, String nome, String email, String cpf, String cnpj, String senha) {
-        this.id_usario = id_usario;
+        this.id_usuario = id_usario;
         this.nome = nome;
         this.email = email;
         this.cpf = cpf;
@@ -29,12 +29,12 @@ public class UsuarioTO {
         this.senha = senha;
     }
 
-    public Long getId_usario() {
-        return id_usario;
+    public Long getId_usuario() {
+        return id_usuario;
     }
 
-    public void setId_usario(Long id_usario) {
-        this.id_usario = id_usario;
+    public void setId_usuario(Long id_usario) {
+        this.id_usuario = id_usario;
     }
 
     public @NotBlank String getNome() {
