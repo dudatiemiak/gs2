@@ -10,9 +10,8 @@ public class UsuarioTO {
     @Email
     private String email;
     @Pattern(regexp = "\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}|\\d{11}", message = "O CPF deve estar no formato 000.000.000-00 ou conter apenas 11 dígitos numéricos")
+    @NotBlank
     private String cpf;
-    @Pattern(regexp = "\\d{2}\\.\\d{3}\\.\\d{3}/\\d{4}-\\d{2}|\\d{14}", message = "O CNPJ deve estar no formato 00.000.000/0000-00 ou conter apenas 14 dígitos numéricos")
-    private String cnpj;
     @NotBlank
     @Size(min = 8, message = "A senha deve ter pelo menos 8 caracteres")
     private String senha;
@@ -20,12 +19,11 @@ public class UsuarioTO {
     public UsuarioTO() {
     }
 
-    public UsuarioTO(Long id_usario, String nome, String email, String cpf, String cnpj, String senha) {
+    public UsuarioTO(Long id_usario, String nome, String email, String cpf, String senha) {
         this.id_usuario = id_usario;
         this.nome = nome;
         this.email = email;
         this.cpf = cpf;
-        this.cnpj = cnpj;
         this.senha = senha;
     }
 
@@ -59,14 +57,6 @@ public class UsuarioTO {
 
     public void setCpf(@Pattern(regexp = "\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}|\\d{11}", message = "O CPF deve estar no formato 000.000.000-00 ou conter apenas 11 dígitos numéricos") String cpf) {
         this.cpf = cpf;
-    }
-
-    public @Pattern(regexp = "\\d{2}\\.\\d{3}\\.\\d{3}/\\d{4}-\\d{2}|\\d{14}", message = "O CNPJ deve estar no formato 00.000.000/0000-00 ou conter apenas 14 dígitos numéricos") String getCnpj() {
-        return cnpj;
-    }
-
-    public void setCnpj(@Pattern(regexp = "\\d{2}\\.\\d{3}\\.\\d{3}/\\d{4}-\\d{2}|\\d{14}", message = "O CNPJ deve estar no formato 00.000.000/0000-00 ou conter apenas 14 dígitos numéricos") String cnpj) {
-        this.cnpj = cnpj;
     }
 
     public @NotBlank @Size(min = 8, message = "A senha deve ter pelo menos 8 caracteres") String getSenha() {

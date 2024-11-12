@@ -20,7 +20,6 @@ public class UsuarioDAO extends Repository{
                     usuario.setNome(rs.getString("nome"));
                     usuario.setEmail(rs.getString("email"));
                     usuario.setCpf(rs.getString("cpf"));
-                    usuario.setCnpj(rs.getString("cnpj"));
                     usuario.setSenha(rs.getString("senha"));
                     usuarios.add(usuario);
                 }
@@ -46,7 +45,6 @@ public class UsuarioDAO extends Repository{
                 usuario.setNome(rs.getString("nome"));
                 usuario.setEmail(rs.getString("email"));
                 usuario.setCpf(rs.getString("cpf"));
-                usuario.setCnpj(rs.getString("cnpj"));
                 usuario.setSenha(rs.getString("senha"));
             }else {
                 return null;
@@ -60,13 +58,12 @@ public class UsuarioDAO extends Repository{
     }
 
     public UsuarioTO save(UsuarioTO usuario){
-        String sql = "insert into ddd_usuario (nome, email, cpf, cnpj, senha) values (?, ?, ?, ?, ?)";
+        String sql = "insert into ddd_usuario (nome, email, cpf, senha) values (?, ?, ?, ?)";
         try(PreparedStatement ps = getConnection().prepareStatement(sql)){
             ps.setString(1, usuario.getNome());
             ps.setString(2, usuario.getEmail());
             ps.setString(3, usuario.getCpf());
-            ps.setString(4, usuario.getCnpj());
-            ps.setString(5, usuario.getSenha());
+            ps.setString(4, usuario.getSenha());
             if (ps.executeUpdate() > 0){
                 return usuario;
             }else {
@@ -94,14 +91,13 @@ public class UsuarioDAO extends Repository{
     }
 
     public UsuarioTO update(UsuarioTO usuario){
-        String sql = "update ddd_usuario set nome=?, email=?, cpf=?, cnpj=?, senha=? where id_usuario=?";
+        String sql = "update ddd_usuario set nome=?, email=?, cpf=?, senha=? where id_usuario=?";
         try(PreparedStatement ps = getConnection().prepareStatement(sql)){
             ps.setString(1, usuario.getNome());
             ps.setString(2, usuario.getEmail());
             ps.setString(3, usuario.getCpf());
-            ps.setString(4, usuario.getCnpj());
-            ps.setString(5, usuario.getSenha());
-            ps.setLong(6, usuario.getId_usuario());
+            ps.setString(4, usuario.getSenha());
+            ps.setLong(5, usuario.getId_usuario());
         } catch (SQLException e) {
             System.out.println("Erro ao atualizar: " + e.getMessage());
         }finally {
