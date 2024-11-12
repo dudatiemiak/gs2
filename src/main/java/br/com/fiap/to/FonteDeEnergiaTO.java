@@ -1,15 +1,26 @@
 package br.com.fiap.to;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class FonteDeEnergiaTO {
     private Long id_es;
+    @NotBlank
     private String tp_energia;
+    @NotBlank
     private String localizacao_geografica;
+    @NotBlank
     private Double energia_mensal;
+    @NotBlank
     private String obj_implementacao;
+    @NotBlank
     private Double orcamento;
+    @NotBlank
     private String necessidade_atendimento;
+    @NotBlank
     private String usuario_es;
+    @NotBlank
     private String preferencia_contato;
+    @NotBlank
     private String contato;
 
     public FonteDeEnergiaTO() {
@@ -36,75 +47,75 @@ public class FonteDeEnergiaTO {
         this.id_es = id_es;
     }
 
-    public String getTp_energia() {
+    public @NotBlank String getTp_energia() {
         return tp_energia;
     }
 
-    public void setTp_energia(String tp_energia) {
+    public void setTp_energia(@NotBlank String tp_energia) {
         this.tp_energia = tp_energia;
     }
 
-    public String getLocalizacao_geografica() {
+    public @NotBlank String getLocalizacao_geografica() {
         return localizacao_geografica;
     }
 
-    public void setLocalizacao_geografica(String localizacao_geografica) {
+    public void setLocalizacao_geografica(@NotBlank String localizacao_geografica) {
         this.localizacao_geografica = localizacao_geografica;
     }
 
-    public Double getEnergia_mensal() {
+    public @NotBlank Double getEnergia_mensal() {
         return energia_mensal;
     }
 
-    public void setEnergia_mensal(Double energia_mensal) {
+    public void setEnergia_mensal(@NotBlank Double energia_mensal) {
         this.energia_mensal = energia_mensal;
     }
 
-    public String getObj_implementacao() {
+    public @NotBlank String getObj_implementacao() {
         return obj_implementacao;
     }
 
-    public void setObj_implementacao(String obj_implementacao) {
+    public void setObj_implementacao(@NotBlank String obj_implementacao) {
         this.obj_implementacao = obj_implementacao;
     }
 
-    public Double getOrcamento() {
+    public @NotBlank Double getOrcamento() {
         return orcamento;
     }
 
-    public void setOrcamento(Double orcamento) {
+    public void setOrcamento(@NotBlank Double orcamento) {
         this.orcamento = orcamento;
     }
 
-    public String getNecessidade_atendimento() {
+    public @NotBlank String getNecessidade_atendimento() {
         return necessidade_atendimento;
     }
 
-    public void setNecessidade_atendimento(String necessidade_atendimento) {
+    public void setNecessidade_atendimento(@NotBlank String necessidade_atendimento) {
         this.necessidade_atendimento = necessidade_atendimento;
     }
 
-    public String getUsuario_es() {
+    public @NotBlank String getUsuario_es() {
         return usuario_es;
     }
 
-    public void setUsuario_es(String usuario_es) {
+    public void setUsuario_es(@NotBlank String usuario_es) {
         this.usuario_es = usuario_es;
     }
 
-    public String getPreferencia_contato() {
+    public @NotBlank String getPreferencia_contato() {
         return preferencia_contato;
     }
 
-    public void setPreferencia_contato(String preferencia_contato) {
+    public void setPreferencia_contato(@NotBlank String preferencia_contato) {
         this.preferencia_contato = preferencia_contato;
     }
 
-    public String getContato() {
+    public @NotBlank String getContato() {
         return contato;
     }
 
-    public void setContato(String contato) {
+    public void setContato(@NotBlank String contato) {
         this.contato = contato;
     }
 }
