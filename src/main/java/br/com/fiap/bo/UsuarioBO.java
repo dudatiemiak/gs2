@@ -3,6 +3,7 @@ package br.com.fiap.bo;
 import br.com.fiap.dao.UsuarioDAO;
 import br.com.fiap.to.UsuarioTO;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class UsuarioBO {
@@ -28,7 +29,7 @@ public class UsuarioBO {
         return usuarioDAO.delete(id_usuario);
     }
 
-    public UsuarioTO update(UsuarioTO usuario){
+    public UsuarioTO update(UsuarioTO usuario) throws SQLException {
         usuarioDAO = new UsuarioDAO();
         return usuarioDAO.update(usuario);
     }

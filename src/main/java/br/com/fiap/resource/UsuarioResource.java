@@ -7,6 +7,7 @@ import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 @Path("/usuario")
@@ -71,7 +72,7 @@ public class UsuarioResource {
     @PUT
     @Path("/{id_usuario}")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response update(@Valid UsuarioTO usuario, @PathParam("id_usuario") Long id_usuario){
+    public Response update(@Valid UsuarioTO usuario, @PathParam("id_usuario") Long id_usuario) throws SQLException {
         usuario.setId_usuario(id_usuario);
         UsuarioTO resultado = usuarioBO.update(usuario);
         Response.ResponseBuilder response = null;
