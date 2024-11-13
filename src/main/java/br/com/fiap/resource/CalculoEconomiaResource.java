@@ -45,6 +45,7 @@ public class CalculoEconomiaResource {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public Response save(@Valid CalculoEconomiaTO economia){
+        calculoEconomiaBO.calcularEconomia(economia);
         CalculoEconomiaTO resultado = calculoEconomiaBO.save(economia);
         Response.ResponseBuilder response = null;
         if (resultado != null){

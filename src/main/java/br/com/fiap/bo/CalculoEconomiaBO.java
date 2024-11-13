@@ -32,4 +32,18 @@ public class CalculoEconomiaBO {
         calculoEconomiaDAO = new CalculoEconomiaDAO();
         return calculoEconomiaDAO.update(economia);
     }
+
+    public void calcularEconomia(CalculoEconomiaTO economia){
+        double consumo = economia.getConsumo_mensal_energia();
+        double custo = economia.getCusto_energia();
+        double percentual = economia.getEconomia_es();
+
+        if (consumo > 0 && custo > 0 && percentual > 0) {
+            double resultadoEconomia = consumo * custo * (percentual / 100);
+            economia.setEconomia_total(resultadoEconomia);
+        } else {
+            economia.setEconomia_total(0.0);
+        }
+    }
+
 }
