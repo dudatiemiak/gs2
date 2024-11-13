@@ -118,6 +118,11 @@ public class FonteDeEnergiaDAO extends Repository{
             ps.setString(8, fonte.getPreferencia_contato());
             ps.setString(9, fonte.getContato());
             ps.setLong(10, fonte.getId_es());
+            if (ps.executeUpdate() > 0){
+                return fonte;
+            }else{
+                return null;
+            }
         } catch (SQLException e) {
             System.out.println("Erro ao atualizar: " + e.getMessage());
         }finally {

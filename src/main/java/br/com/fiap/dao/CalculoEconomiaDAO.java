@@ -98,6 +98,11 @@ public class CalculoEconomiaDAO extends Repository{
             ps.setDouble(3, economia.getEconomia_es());
             ps.setDouble(4, economia.getEconomia_total());
             ps.setLong(5, economia.getId_economia());
+            if (ps.executeUpdate() > 0){
+                return economia;
+            }else{
+                return null;
+            }
         } catch (SQLException e) {
             System.out.println("Erro ao atualizar: " + e.getMessage());
         }finally {
