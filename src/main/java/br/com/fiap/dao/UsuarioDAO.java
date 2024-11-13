@@ -98,6 +98,11 @@ public class UsuarioDAO extends Repository{
             ps.setString(3, usuario.getCpf());
             ps.setString(4, usuario.getSenha());
             ps.setLong(5, usuario.getId_usuario());
+            if (ps.executeUpdate() > 0){
+                return usuario;
+            }else{
+                return null;
+            }
         } catch (SQLException e) {
             System.out.println("Erro ao atualizar: " + e.getMessage());
         }finally {
