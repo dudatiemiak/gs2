@@ -1,14 +1,15 @@
 package br.com.fiap.to;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 public class CalculoEconomiaTO {
     private Long id_economia;
-    @NotBlank
+    @NotNull
     private Double consumo_mensal_energia;
-    @NotBlank
+    @NotNull
     private Double custo_energia;
-    @NotBlank
+    @NotNull
     private Double economia_es;
     private Double economia_total;
 
@@ -31,27 +32,27 @@ public class CalculoEconomiaTO {
         this.id_economia = id_economia;
     }
 
-    public @NotBlank Double getConsumo_mensal_energia() {
+    public @NotNull Double getConsumo_mensal_energia() {
         return consumo_mensal_energia;
     }
 
-    public void setConsumo_mensal_energia(@NotBlank Double consumo_mensal_energia) {
+    public void setConsumo_mensal_energia(@NotNull Double consumo_mensal_energia) {
         this.consumo_mensal_energia = consumo_mensal_energia;
     }
 
-    public @NotBlank Double getCusto_energia() {
+    public @NotNull Double getCusto_energia() {
         return custo_energia;
     }
 
-    public void setCusto_energia(@NotBlank Double custo_energia) {
+    public void setCusto_energia(@NotNull Double custo_energia) {
         this.custo_energia = custo_energia;
     }
 
-    public @NotBlank Double getEconomia_es() {
+    public @NotNull Double getEconomia_es() {
         return economia_es;
     }
 
-    public void setEconomia_es(@NotBlank Double economia_es) {
+    public void setEconomia_es(@NotNull Double economia_es) {
         this.economia_es = economia_es;
     }
 
