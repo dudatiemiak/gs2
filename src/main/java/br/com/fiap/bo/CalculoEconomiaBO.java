@@ -36,7 +36,7 @@ public class CalculoEconomiaBO {
         return calculoEconomiaDAO.update(economia);
     }
 
-    public void calcularEconomia(CalculoEconomiaTO economia){
+    private void calcularEconomia(CalculoEconomiaTO economia){
         double consumo = economia.getConsumo_mensal_energia();
         double custo = economia.getCusto_energia();
         double percentual = economia.getEconomia_es();
