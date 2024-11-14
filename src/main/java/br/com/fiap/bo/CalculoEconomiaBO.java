@@ -20,6 +20,9 @@ public class CalculoEconomiaBO {
 
     public CalculoEconomiaTO save(CalculoEconomiaTO economia){
         calculoEconomiaDAO = new CalculoEconomiaDAO();
+
+        calcularEconomia(economia);
+
         return calculoEconomiaDAO.save(economia);
     }
 
