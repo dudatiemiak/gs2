@@ -1,7 +1,7 @@
 package br.com.fiap.to;
 
 public class ConsultoriaTO {
-    private String id_consultoria;
+    private Long id_consultoria;
     private String nome_usuario;
     private String email_usuario;
     private String duvidas;
@@ -9,18 +9,18 @@ public class ConsultoriaTO {
     public ConsultoriaTO() {
     }
 
-    public ConsultoriaTO(String id_consultoria, String nome_usuario, String email_usuario, String duvidas) {
+    public ConsultoriaTO(Long id_consultoria, String nome_usuario, String email_usuario, String duvidas) {
         this.id_consultoria = id_consultoria;
         this.nome_usuario = nome_usuario;
         this.email_usuario = email_usuario;
         this.duvidas = duvidas;
     }
 
-    public String getId_consultoria() {
+    public Long getId_consultoria() {
         return id_consultoria;
     }
 
-    public void setId_consultoria(String id_consultoria) {
+    public void setId_consultoria(Long id_consultoria) {
         this.id_consultoria = id_consultoria;
     }
 
