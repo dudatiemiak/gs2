@@ -1,6 +1,7 @@
 package br.com.fiap.to;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 public class FonteDeEnergiaTO {
     private Long id_es;
@@ -8,11 +9,11 @@ public class FonteDeEnergiaTO {
     private String tp_energia;
     @NotBlank
     private String localizacao_geografica;
-    @NotBlank
+    @NotNull
     private Double energia_mensal;
     @NotBlank
     private String obj_implementacao;
-    @NotBlank
+    @NotNull
     private Double orcamento;
     @NotBlank
     private String necessidade_atendimento;
@@ -63,11 +64,11 @@ public class FonteDeEnergiaTO {
         this.localizacao_geografica = localizacao_geografica;
     }
 
-    public @NotBlank Double getEnergia_mensal() {
+    public @NotNull Double getEnergia_mensal() {
         return energia_mensal;
     }
 
-    public void setEnergia_mensal(@NotBlank Double energia_mensal) {
+    public void setEnergia_mensal(@NotNull Double energia_mensal) {
         this.energia_mensal = energia_mensal;
     }
 
@@ -79,11 +80,11 @@ public class FonteDeEnergiaTO {
         this.obj_implementacao = obj_implementacao;
     }
 
-    public @NotBlank Double getOrcamento() {
+    public @NotNull Double getOrcamento() {
         return orcamento;
     }
 
-    public void setOrcamento(@NotBlank Double orcamento) {
+    public void setOrcamento(@NotNull Double orcamento) {
         this.orcamento = orcamento;
     }
 
