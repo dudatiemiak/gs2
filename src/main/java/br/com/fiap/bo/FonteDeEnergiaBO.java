@@ -3,6 +3,7 @@ package br.com.fiap.bo;
 import br.com.fiap.dao.FonteDeEnergiaDAO;
 import br.com.fiap.to.FonteDeEnergiaTO;
 
+import java.text.Normalizer;
 import java.util.ArrayList;
 
 public class FonteDeEnergiaBO {
@@ -20,6 +21,8 @@ public class FonteDeEnergiaBO {
 
     public FonteDeEnergiaTO save(FonteDeEnergiaTO fonte){
         fonteDAO = new FonteDeEnergiaDAO();
+        String recomendacao = definirRecomendacao(fonte);
+        fonte.setTp_energia(recomendacao);
         return fonteDAO.save(fonte);
     }
 
@@ -32,4 +35,107 @@ public class FonteDeEnergiaBO {
         fonteDAO = new FonteDeEnergiaDAO();
         return fonteDAO.update(fonte);
     }
+
+    private String definirRecomendacao(FonteDeEnergiaTO fonte) {
+        String estado = fonte.getLocalizacao_geografica();
+        String objetivo = fonte.getObj_implementacao();
+        double orcamento = fonte.getOrcamento();
+
+        // Validação básica
+        if (estado == null || estado.isEmpty() || objetivo == null || objetivo.isEmpty()) {
+            return "Dados insuficientes para a recomendação.";
+        }
+
+        // Análise de orçamento real
+        if (orcamento < 15000) {
+            return "Recomendação: Energia Solar Residencial - Baixo orçamento, indicada para residências pequenas.";
+        }
+
+        // Análise baseada no estado e objetivo de implementação
+        switch (estado) {
+            case "Acre":
+            case "Amazonas":
+            case "Roraima":
+            case "Rondônia":
+                if (objetivo.equals("rural")) {
+                    if (orcamento >= 30000) {
+                        return "Recomendação: Energia Eólica - Ideal para áreas com ventos constantes e poucas alternativas.";
+                    } else {
+                        return "Recomendação: Energia Solar Fotovoltaica - Melhor opção para regiões remotas com boa insolação.";
+                    }
+                } else if (objetivo.equals("Industrial")) {
+                    if (orcamento >= 100000) {
+                        return "Recomendação: Energia Solar Híbrida - Alta eficiência para indústrias com alta demanda energética.";
+                    } else {
+                        return "Recomendação: Biomassa - Utilize resíduos florestais disponíveis na região.";
+                    }
+                } else {
+                    return "Recomendação: Energia Solar Residencial - Boa opção para residências com orçamento moderado.";
+                }
+
+            case "Bahia":
+            case "Ceará":
+            case "Rio grande do norte":
+                if (objetivo.equals("Rural")) {
+                    return "Recomendação: Energia Eólica - Região com excelente potencial eólico.";
+                } else if (objetivo.equals("Industrial")) {
+                    if (orcamento >= 150000) {
+                        return "Recomendação: Energia Solar Híbrida - Alta demanda e eficiência.";
+                    } else {
+                        return "Recomendação: Energia Solar Fotovoltaica - Opção viável para menor orçamento.";
+                    }
+                } else {
+                    return "Recomendação: Energia Solar Residencial - Ideal para residências aproveitando a alta insolação.";
+                }
+
+            case "São paulo":
+            case "Minas gerais":
+            case "Paraná":
+                if (objetivo.equals("Rural")) {
+                    return "Recomendação: Biomassa - Aproveite resíduos agrícolas para geração de energia.";
+                } else if (objetivo.equals("Industrial")) {
+                    if (orcamento >= 200000) {
+                        return "Recomendação: Hidroenergia (PCH) - Opção sustentável e eficiente.";
+                    } else {
+                        return "Recomendação: Energia Solar Fotovoltaica - Opção mais econômica para indústrias.";
+                    }
+                } else {
+                    return "Recomendação: Energia Solar Residencial - Alta eficiência para áreas urbanas.";
+                }
+
+            case "Rio grande do sul":
+            case "Santa catarina":
+                if (objetivo.equals("Rural")) {
+                    return "Recomendação: Energia Eólica - Aproveite o potencial de ventos na região.";
+                } else if (objetivo.equals("Industrial")) {
+                    if (orcamento >= 100000) {
+                        return "Recomendação: Hidroenergia (PCH) - Ideal para indústrias com alto consumo.";
+                    } else {
+                        return "Recomendação: Energia Solar Fotovoltaica - Alternativa viável para menor orçamento.";
+                    }
+                } else {
+                    return "Recomendação: Energia Solar Residencial - Solução eficiente para residências.";
+                }
+
+            case "Mato grosso":
+            case "Mato grosso do sul":
+            case "Goiás":
+                if (objetivo.equals("Rural")) {
+                    return "Recomendação: Biomassa - Utilize resíduos agrícolas abundantes na região.";
+                } else if (objetivo.equals("Industrial")) {
+                    if (orcamento >= 150000) {
+                        return "Recomendação: Energia Solar Híbrida - Alta eficiência para grandes indústrias.";
+                    } else {
+                        return "Recomendação: Biomassa - Alternativa sustentável para menor orçamento.";
+                    }
+                } else {
+                    return "Recomendação: Energia Solar Residencial - Boa escolha para residências urbanas.";
+                }
+
+            default:
+                return "Estado não reconhecido. Por favor, verifique o nome do estado.";
+        }
+
+    }
+
 }
