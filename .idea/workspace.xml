@@ -4,32 +4,58 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d57408d0-d18a-4948-814d-959dfe4c09df" name="Changes" comment="" />
+    <list default="true" id="d57408d0-d18a-4948-814d-959dfe4c09df" name="Changes" comment="Classe ConsultoriaDAO adicionada.">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/bo/ConsultoriaBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;dudatiemiak&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/dudatiemiak/gs2.git&quot;,
+    &quot;accountId&quot;: &quot;866701e0-aa61-44cc-9172-02b86d8ec74e&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2oXfehq4RWaPCuPKSwPs8jqp5wE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -39,6 +65,307 @@
       <option name="presentableId" value="Default" />
       <updated>1731020939459</updated>
     </task>
+    <task id="LOCAL-00001" summary="Adicionando dependências.">
+      <option name="closed" value="true" />
+      <created>1731021755207</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731021755207</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Movendo a classe MyResource para o pacote resource.">
+      <option name="closed" value="true" />
+      <created>1731021898045</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731021898045</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Alterando a Main">
+      <option name="closed" value="true" />
+      <created>1731022291597</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731022291597</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Criando classe UsuarioTO">
+      <option name="closed" value="true" />
+      <created>1731174039272</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731174039272</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Classe UsuarioTO finalizada.">
+      <option name="closed" value="true" />
+      <created>1731174649509</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731174649509</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Criando classe UsuarioDAO.">
+      <option name="closed" value="true" />
+      <created>1731175158570</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731175158570</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Pata application.properties adicionada.">
+      <option name="closed" value="true" />
+      <created>1731175419161</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1731175419161</updated>
+    </task>
+    <task id="LOCAL-00008" summary="ConnectionFactory criada.">
+      <option name="closed" value="true" />
+      <created>1731175526527</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1731175526527</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Adicioado classe Repository.">
+      <option name="closed" value="true" />
+      <created>1731175661187</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1731175661188</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Arrumando o nome id_usuario.">
+      <option name="closed" value="true" />
+      <created>1731184634672</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1731184634672</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Métodos da classe UsuarioDAO findAll, findByCodigo, save, delete e update adicionados.">
+      <option name="closed" value="true" />
+      <created>1731184730987</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1731184730987</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Classe UsuarioBO adicionada.">
+      <option name="closed" value="true" />
+      <created>1731185119310</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1731185119310</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Classe UsuarioResource adicionada.">
+      <option name="closed" value="true" />
+      <created>1731186224532</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1731186224532</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Classe CorsFilter adicionada.">
+      <option name="closed" value="true" />
+      <created>1731187466482</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1731187466482</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Classe FonteDeEnergiaTO criada.">
+      <option name="closed" value="true" />
+      <created>1731357085305</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1731357085306</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Classe FonteDeEnergiaDAOia criada.">
+      <option name="closed" value="true" />
+      <created>1731358172127</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1731358172128</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Classe FonteDeEnergiaBO criada.">
+      <option name="closed" value="true" />
+      <created>1731358298175</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1731358298176</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Classe FonteDeEnergiaResource criada.">
+      <option name="closed" value="true" />
+      <created>1731358950371</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1731358950372</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Classe CalculoEconomiaTO criada.">
+      <option name="closed" value="true" />
+      <created>1731459085556</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1731459085557</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Classe CalculoEconomiaDAO criada.">
+      <option name="closed" value="true" />
+      <created>1731459630619</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1731459630620</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Classe CalculoEconomiaBO criada.">
+      <option name="closed" value="true" />
+      <created>1731459803157</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1731459803158</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Classe CalculoEconomiaResource criada.">
+      <option name="closed" value="true" />
+      <created>1731460074488</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1731460074488</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Arrumando erro do método update.">
+      <option name="closed" value="true" />
+      <created>1731533276440</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1731533276440</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Arrumando erro do método update.">
+      <option name="closed" value="true" />
+      <created>1731533381980</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1731533381980</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Adicionando método para calcular economia.">
+      <option name="closed" value="true" />
+      <created>1731533826404</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1731533826404</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Concertando erros.">
+      <option name="closed" value="true" />
+      <created>1731533851074</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1731533851074</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Tentando concertar erro do método calcularEconomia, porque não estava funcionando para salvar no banco de dados.">
+      <option name="closed" value="true" />
+      <created>1731592317297</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1731592317297</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Mudando @NotBlank para @NotNull nos atributos Double.">
+      <option name="closed" value="true" />
+      <created>1731600866025</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1731600866025</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Mudando @NotBlank para @NotNull nos atributos Double.">
+      <option name="closed" value="true" />
+      <created>1731601020302</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1731601020302</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Criando método definirRecomendacao para sugerir energias sustentáveis dependendo das informações passadas pelo usuário.">
+      <option name="closed" value="true" />
+      <created>1731614670513</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1731614670513</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Mudando o método da classe CalculoEconomiaBO para private e retirando ele da classe CalculoEconomiaResource.">
+      <option name="closed" value="true" />
+      <created>1731614723611</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1731614723611</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Classe ConsultoriaTO adicionada.">
+      <option name="closed" value="true" />
+      <created>1731618428105</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1731618428105</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Mudando o tipo de id_consultoria de String para Long.">
+      <option name="closed" value="true" />
+      <created>1731619197936</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1731619197936</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Classe ConsultoriaDAO adicionada.">
+      <option name="closed" value="true" />
+      <created>1731619525441</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1731619525441</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ConnectionFactory criada." />
+    <MESSAGE value="Adicioado classe Repository." />
+    <MESSAGE value="Arrumando o nome id_usuario." />
+    <MESSAGE value="Métodos da classe UsuarioDAO findAll, findByCodigo, save, delete e update adicionados." />
+    <MESSAGE value="Classe UsuarioBO adicionada." />
+    <MESSAGE value="Classe UsuarioResource adicionada." />
+    <MESSAGE value="Classe CorsFilter adicionada." />
+    <MESSAGE value="Classe FonteDeEnergiaTO criada." />
+    <MESSAGE value="Classe FonteDeEnergiaDAOia criada." />
+    <MESSAGE value="Classe FonteDeEnergiaBO criada." />
+    <MESSAGE value="Classe FonteDeEnergiaResource criada." />
+    <MESSAGE value="Classe CalculoEconomiaTO criada." />
+    <MESSAGE value="Classe CalculoEconomiaDAO criada." />
+    <MESSAGE value="Classe CalculoEconomiaBO criada." />
+    <MESSAGE value="Classe CalculoEconomiaResource criada." />
+    <MESSAGE value="Arrumando erro do método update." />
+    <MESSAGE value="Adicionando método para calcular economia." />
+    <MESSAGE value="Concertando erros." />
+    <MESSAGE value="Tentando concertar erro do método calcularEconomia, porque não estava funcionando para salvar no banco de dados." />
+    <MESSAGE value="Mudando @NotBlank para @NotNull nos atributos Double." />
+    <MESSAGE value="Criando método definirRecomendacao para sugerir energias sustentáveis dependendo das informações passadas pelo usuário." />
+    <MESSAGE value="Mudando o método da classe CalculoEconomiaBO para private e retirando ele da classe CalculoEconomiaResource." />
+    <MESSAGE value="Classe ConsultoriaTO adicionada." />
+    <MESSAGE value="Mudando o tipo de id_consultoria de String para Long." />
+    <MESSAGE value="Classe ConsultoriaDAO adicionada." />
+    <option name="LAST_COMMIT_MESSAGE" value="Classe ConsultoriaDAO adicionada." />
   </component>
 </project>
