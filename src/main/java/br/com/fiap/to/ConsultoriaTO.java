@@ -1,9 +1,14 @@
 package br.com.fiap.to;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class ConsultoriaTO {
     private Long id_consultoria;
+    @NotBlank
     private String nome_usuario;
+    @NotBlank
     private String email_usuario;
+    @NotBlank
     private String duvidas;
 
     public ConsultoriaTO() {
@@ -24,27 +29,27 @@ public class ConsultoriaTO {
         this.id_consultoria = id_consultoria;
     }
 
-    public String getNome_usuario() {
+    public @NotBlank String getNome_usuario() {
         return nome_usuario;
     }
 
-    public void setNome_usuario(String nome_usuario) {
+    public void setNome_usuario(@NotBlank String nome_usuario) {
         this.nome_usuario = nome_usuario;
     }
 
-    public String getEmail_usuario() {
+    public @NotBlank String getEmail_usuario() {
         return email_usuario;
     }
 
-    public void setEmail_usuario(String email_usuario) {
+    public void setEmail_usuario(@NotBlank String email_usuario) {
         this.email_usuario = email_usuario;
     }
 
-    public String getDuvidas() {
+    public @NotBlank String getDuvidas() {
         return duvidas;
     }
 
-    public void setDuvidas(String duvidas) {
+    public void setDuvidas(@NotBlank String duvidas) {
         this.duvidas = duvidas;
     }
 }
