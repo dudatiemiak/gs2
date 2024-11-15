@@ -1,6 +1,7 @@
 package br.com.fiap.bo;
 
 import br.com.fiap.dao.CalculoEconomiaDAO;
+import br.com.fiap.exception.ValoresInvalidosException;
 import br.com.fiap.to.CalculoEconomiaTO;
 
 import java.util.ArrayList;
@@ -41,11 +42,25 @@ public class CalculoEconomiaBO {
         double custo = economia.getCusto_energia();
         double percentual = economia.getEconomia_es();
 
-        if (consumo > 0 && custo > 0 && percentual > 0) {
+        try {
+            if (consumo <= 0) {
+                throw new ValoresInvalidosException("Consumo mensal de energia deve ser maior que zero.");
+            }
+            if (custo <= 0) {
+                throw new ValoresInvalidosException("Custo da energia deve ser maior que zero.");
+            }
+            if (percentual <= 0) {
+                throw new ValoresInvalidosException("Percentual de economia deve ser maior que zero.");
+            }
+
             double resultadoEconomia = consumo * custo * (percentual / 100);
             economia.setEconomia_total(resultadoEconomia);
-        } else {
+
+        } catch (ValoresInvalidosException e) {
+            System.out.println("Erro no cálculo da economia: " + e.getMessage());
             economia.setEconomia_total(0.0);
+        } finally {
+            System.out.println("Cálculo de economia finalizado.");
         }
     }
 
