@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d57408d0-d18a-4948-814d-959dfe4c09df" name="Changes" comment="Classe ConsultoriaDAO adicionada.">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/bo/ConsultoriaBO.java" afterDir="false" />
+    <list default="true" id="d57408d0-d18a-4948-814d-959dfe4c09df" name="Changes" comment="xml">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/exception/DadosInsuficientesException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/bo/FonteDeEnergiaBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/bo/FonteDeEnergiaBO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Exception" />
       </list>
     </option>
   </component>
@@ -337,13 +337,34 @@
       <option name="project" value="LOCAL" />
       <updated>1731619525441</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Classe ConsultoriaBO adicionada.">
+      <option name="closed" value="true" />
+      <created>1731619646892</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1731619646893</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Classe ConsultoriaResource adicionada.">
+      <option name="closed" value="true" />
+      <created>1731619837348</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1731619837349</updated>
+    </task>
+    <task id="LOCAL-00037" summary="xml">
+      <option name="closed" value="true" />
+      <created>1731619858161</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1731619858161</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ConnectionFactory criada." />
-    <MESSAGE value="Adicioado classe Repository." />
-    <MESSAGE value="Arrumando o nome id_usuario." />
     <MESSAGE value="Métodos da classe UsuarioDAO findAll, findByCodigo, save, delete e update adicionados." />
     <MESSAGE value="Classe UsuarioBO adicionada." />
     <MESSAGE value="Classe UsuarioResource adicionada." />
@@ -366,6 +387,9 @@
     <MESSAGE value="Classe ConsultoriaTO adicionada." />
     <MESSAGE value="Mudando o tipo de id_consultoria de String para Long." />
     <MESSAGE value="Classe ConsultoriaDAO adicionada." />
-    <option name="LAST_COMMIT_MESSAGE" value="Classe ConsultoriaDAO adicionada." />
+    <MESSAGE value="Classe ConsultoriaBO adicionada." />
+    <MESSAGE value="Classe ConsultoriaResource adicionada." />
+    <MESSAGE value="xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="xml" />
   </component>
 </project>
