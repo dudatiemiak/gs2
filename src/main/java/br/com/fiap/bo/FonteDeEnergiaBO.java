@@ -22,8 +22,7 @@ public class FonteDeEnergiaBO {
 
     public FonteDeEnergiaTO save(FonteDeEnergiaTO fonte){
         fonteDAO = new FonteDeEnergiaDAO();
-        String recomendacao = definirRecomendacao(fonte);
-        fonte.setTp_energia(recomendacao);
+        definirRecomendacao(fonte);
         return fonteDAO.save(fonte);
     }
 
@@ -37,11 +36,11 @@ public class FonteDeEnergiaBO {
         return fonteDAO.update(fonte);
     }
 
-    private String definirRecomendacao(FonteDeEnergiaTO fonte) {
+    private void definirRecomendacao(FonteDeEnergiaTO fonte) {
         String estado = fonte.getLocalizacao_geografica();
         String objetivo = fonte.getObj_implementacao();
         double orcamento = fonte.getOrcamento();
-        String tp_energia;
+        String tp_energia = "Recomendação não disponível.";
 
 
         try {
@@ -143,18 +142,18 @@ public class FonteDeEnergiaBO {
             }
 
         }catch (ArithmeticException e) {
-            return "Erro de cálculo: " + e.getMessage();
+            System.out.println("Erro de cálculo: " + e.getMessage());
         } catch (NumberFormatException e) {
-            return "Erro de conversão: o valor do orçamento deve ser numérico. " + e.getMessage();
+            System.out.println("Erro de conversão: o valor do orçamento deve ser numérico. " + e.getMessage());
         } catch (IllegalArgumentException e) {
-            return "Erro de entrada: " + e.getMessage();
+             System.out.println("Erro de entrada: " + e.getMessage());
         } catch (Exception e) {
-            return "Erro inesperado: " + e.getMessage();
+            System.out.println("Erro inesperado: " + e.getMessage());
         } finally {
             System.out.println("Recomendação de energia sustentável concluída.");
         }
 
-        return tp_energia;
+        fonte.setTp_energia(tp_energia);
 
     }
 
