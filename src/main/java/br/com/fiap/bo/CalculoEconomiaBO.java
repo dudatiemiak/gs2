@@ -37,11 +37,10 @@ public class CalculoEconomiaBO {
         return calculoEconomiaDAO.update(economia);
     }
 
-    private void calcularEconomia(CalculoEconomiaTO economia){
+    private void calcularEconomia(CalculoEconomiaTO economia) {
         double consumo = economia.getConsumo_mensal_energia();
         double custo = economia.getCusto_energia();
         double percentual = economia.getEconomia_es();
-        double resultadoEconomia = economia.getEconomia_total();
 
         try {
             if (consumo <= 0) {
@@ -54,7 +53,8 @@ public class CalculoEconomiaBO {
                 throw new ValoresInvalidosException("Percentual de economia deve ser maior que zero.");
             }
 
-            resultadoEconomia = consumo * custo * (percentual / 100);
+            double resultadoEconomia = consumo * custo * (percentual / 100);
+            economia.setEconomia_total(resultadoEconomia);
 
         } catch (ValoresInvalidosException e) {
             System.out.println("Erro no cálculo da economia: " + e.getMessage());
