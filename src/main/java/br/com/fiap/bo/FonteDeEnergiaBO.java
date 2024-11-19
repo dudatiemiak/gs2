@@ -40,6 +40,7 @@ public class FonteDeEnergiaBO {
         String estado = fonte.getLocalizacao_geografica();
         String objetivo = fonte.getObj_implementacao();
         double orcamento = fonte.getOrcamento();
+        double consumo = fonte.getEnergia_mensal();
         String tp_energia = "Recomendação não disponível.";
 
 
@@ -66,8 +67,16 @@ public class FonteDeEnergiaBO {
                     } else if (objetivo.equalsIgnoreCase("Industrial")) {
                         if (orcamento >= 100000) {
                             tp_energia = "Recomendação: Energia Solar Híbrida - Alta eficiência para indústrias com alta demanda energética.";
+                        } else if (consumo >= 1200 && consumo <= 1500 && orcamento >= 20000 && orcamento <= 50000){
+                            tp_energia = "Recomendação: Energia Solar Fotovoltaica - Melhor opção para pequenas empresas em regiões com alta incidência solar, como o Acre, Amazonas, Roraima e Rondônia. A energia solar é uma solução econômica e sustentável, ideal para áreas remotas, pois aproveita a abundante luz solar, reduzindo custos com eletricidade e trazendo alta eficiência energética. Além disso, com o baixo custo de operação e a possibilidade de personalização do sistema de acordo com as necessidades da empresa, a energia solar se torna a alternativa mais viável para garantir a sustentabilidade e a redução de gastos operacionais.";
+                        } else if (consumo >= 500000 && consumo <= 5000000 && orcamento >= 5000000 && orcamento <= 7000000) {
+                            tp_energia = "Recomendação: Energia Eólica - Ideal para atender grandes demandas energéticas de empresas, aproveitando os padrões de vento constantes e a escalabilidade dos sistemas, enquanto promove uma operação sustentável e econômica no longo prazo.";
+                        } else if (consumo >= 1200 && consumo <= 1500 && orcamento >= 15000 && orcamento <= 20000){
+                            tp_energia = "Recomendação: Energia Solar Residencial de Pequeno Porte - Alternativa econômica e eficiente para pequenas empresas, aproveitando o alto índice de insolação na região para reduzir custos com energia elétrica, mesmo com um orçamento limitado.";
+                        } else if (consumo >= 500000 && consumo <= 5000000 && orcamento >= 3000000 && orcamento < 5000000) {
+                            tp_energia = "Recomendação: Energia Solar Híbrida - Uma solução eficiente e sustentável para grandes empresas que necessitam de fornecimento contínuo e confiável, aproveitando os recursos naturais da região amazônica dentro de um orçamento moderado.";
                         } else {
-                            tp_energia = "Recomendação: Biomassa - Utilize resíduos florestais disponíveis na região.";
+                            tp_energia = "O orçamento não é suficiente para instalar energia sustentável";
                         }
                     } else {
                         tp_energia = "Recomendação: Energia Solar Residencial - Boa opção para residências com orçamento moderado.";
