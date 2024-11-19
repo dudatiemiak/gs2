@@ -5,7 +5,6 @@ import jakarta.validation.constraints.NotNull;
 
 public class FonteDeEnergiaTO {
     private Long id_es;
-    @NotBlank
     private String tp_energia;
     @NotBlank
     private String localizacao_geografica;
