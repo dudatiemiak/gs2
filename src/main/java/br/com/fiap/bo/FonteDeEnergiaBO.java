@@ -54,10 +54,10 @@ public class FonteDeEnergiaBO {
             }
 
             switch (estado) {
-                case "Acre":
-                case "Amazonas":
-                case "Roraima":
-                case "Rondônia":
+                case "AC":
+                case "AM":
+                case "RR":
+                case "RO":
                     if (objetivo.equalsIgnoreCase("Rural")) {
                         if (orcamento >= 30000) {
                             tp_energia = "Recomendação: Energia Eólica - Ideal para áreas com ventos constantes e poucas alternativas.";
@@ -85,14 +85,47 @@ public class FonteDeEnergiaBO {
 
                 case "Bahia":
                 case "Ceará":
+                    if (objetivo.equalsIgnoreCase("Rural")) {
+                        tp_energia = "Recomendação: Energia Eólica - Região com excelente potencial eólico.";
+                    } else if (objetivo.equalsIgnoreCase("Industrial")) {
+                        if (orcamento >= 150000) {
+                            tp_energia = "Recomendação: Energia Solar Híbrida - Alta demanda e eficiência.";
+                        } else if (consumo >= 1200 && consumo <= 1500 && orcamento >= 25000 && orcamento <= 50000){
+                            tp_energia = "Recomendação: Energia Solar Fotovoltaica - Melhor opção para para pequenas empresas no Ceará e na Bahia devido à alta incidência de luz solar ao longo do ano. Essa alternativa sustentável oferece um excelente custo-benefício, permitindo uma economia significativa na conta de energia elétrica. Além disso, sistemas solares são de fácil instalação, possuem baixa manutenção e proporcionam autonomia energética, o que é fundamental para pequenas empresas que desejam reduzir custos operacionais. Com um investimento inicial acessível, variando entre R$ 25.000 e R$ 50.000, é possível garantir um retorno financeiro em poucos anos, contribuindo também para a preservação ambiental e para a valorização da marca como um negócio sustentável.";
+                        } else if (consumo >= 500000 && consumo <= 5000000 && orcamento >= 200000 && orcamento <= 500000) {
+                            tp_energia = "Recomendação: Energia Solar Híbrida - Para grandes empresas localizadas na Bahia, Ceará e Rio Grande do Norte, a energia solar híbrida é a solução mais eficiente e sustentável. Essa tecnologia combina sistemas fotovoltaicos com armazenamento em baterias e, em alguns casos, integração com a rede elétrica. A energia solar híbrida é ideal para atender a grandes demandas energéticas, garantindo uma operação contínua e confiável, mesmo durante a noite ou em dias com baixa insolação.";
+                        } else if (consumo >= 500000 && consumo <= 5000000 && orcamento > 700000 && orcamento <= 3000000) {
+                            tp_energia = "Recomendação: Energia Eólica - É uma excelente alternativa devido ao potencial de ventos constantes nessas regiões. Grandes parques eólicos podem atender às altas demandas energéticas de empresas industriais e comerciais, oferecendo uma solução econômica no longo prazo, com baixos custos operacionais e uma significativa redução de emissões de carbono.";
+                        } else if (consumo >= 1200 && consumo <= 1500 && orcamento >= 15000 && orcamento <= 25000){
+                            tp_energia = "Recomendação: Energia Solar Fotovoltaica - Alternativa econômica e eficiente para pequenas empresas com orçamento limitado. Em regiões como a Bahia, Ceará e Rio Grande do Norte, que possuem alta incidência solar, a energia solar pode gerar uma economia significativa na conta de luz. Mesmo com um orçamento menor, é possível instalar um sistema solar de pequeno porte que atenda a uma parte ou totalidade da demanda energética da empresa.";
+                        } else if (consumo >= 500000 && consumo <= 5000000 && orcamento >= 120000 && orcamento < 200000) {
+                            tp_energia = "Recomendação: Energia Solar Fotovoltaica Híbrida (com Bateria) - A instalação de energia solar fotovoltaica híbrida (com sistemas de armazenamento de energia) pode ser uma alternativa. Com esse sistema, a empresa não depende tanto da rede elétrica, já que a energia excedente gerada durante o dia é armazenada em baterias para ser utilizada durante a noite ou em períodos de baixa geração.";
+                        } else {
+                            tp_energia = "O orçamento não é suficiente para instalar energia sustentável";
+                        }
+                    } else {
+                        tp_energia = "Recomendação: Energia Solar Residencial - Ideal para residências aproveitando a alta insolação.";
+                    }
+                    break;
+
                 case "Rio grande do norte":
                     if (objetivo.equalsIgnoreCase("Rural")) {
                         tp_energia = "Recomendação: Energia Eólica - Região com excelente potencial eólico.";
                     } else if (objetivo.equalsIgnoreCase("Industrial")) {
                         if (orcamento >= 150000) {
                             tp_energia = "Recomendação: Energia Solar Híbrida - Alta demanda e eficiência.";
+                        } else if (consumo >= 1200 && consumo <= 1500 && orcamento >= 25000 && orcamento <= 50000){
+                            tp_energia = "Recomendação: Energia Eólica - Melhor opção para para pequenas empresas devido ao alto potencial de ventos constantes na região. Essa alternativa sustentável se destaca por sua alta capacidade de geração, mesmo em pequenos sistemas, garantindo um fornecimento confiável e estável de energia. Embora o investimento inicial seja maior, o sistema eólico oferece benefícios de longo prazo, como a redução significativa dos custos com energia elétrica e a diminuição da pegada de carbono. Além disso, a energia eólica é ideal para empresas que desejam adotar soluções inovadoras e comprometidas com a sustentabilidade em uma das regiões mais favoráveis do Brasil para esse tipo de energia.";
+                        } else if (consumo >= 500000 && consumo <= 5000000 && orcamento >= 5000000 && orcamento <= 7000000) {
+                            tp_energia = "Recomendação: Energia Solar Híbrida - Para grandes empresas localizadas na Bahia, Ceará e Rio Grande do Norte, a energia solar híbrida é a solução mais eficiente e sustentável. Essa tecnologia combina sistemas fotovoltaicos com armazenamento em baterias e, em alguns casos, integração com a rede elétrica. A energia solar híbrida é ideal para atender a grandes demandas energéticas, garantindo uma operação contínua e confiável, mesmo durante a noite ou em dias com baixa insolação.";
+                        } else if (consumo >= 500000 && consumo <= 5000000 && orcamento > 700000 && orcamento <= 3000000) {
+                            tp_energia = "Recomendação: Energia Eólica - É uma excelente alternativa devido ao potencial de ventos constantes nessas regiões. Grandes parques eólicos podem atender às altas demandas energéticas de empresas industriais e comerciais, oferecendo uma solução econômica no longo prazo, com baixos custos operacionais e uma significativa redução de emissões de carbono.";
+                        }  else if (consumo >= 1200 && consumo <= 1500 && orcamento >= 15000 && orcamento <= 25000){
+                            tp_energia = "Recomendação: Energia Solar Fotovoltaica - Alternativa econômica e eficiente para pequenas empresas com orçamento limitado. Em regiões como a Bahia, Ceará e Rio Grande do Norte, que possuem alta incidência solar, a energia solar pode gerar uma economia significativa na conta de luz. Mesmo com um orçamento menor, é possível instalar um sistema solar de pequeno porte que atenda a uma parte ou totalidade da demanda energética da empresa.";
+                        }else if (consumo >= 500000 && consumo <= 5000000 && orcamento >= 120000 && orcamento < 200000) {
+                            tp_energia = "Recomendação: Energia Solar Fotovoltaica Híbrida (com Bateria) - A instalação de energia solar fotovoltaica híbrida (com sistemas de armazenamento de energia) pode ser uma alternativa. Com esse sistema, a empresa não depende tanto da rede elétrica, já que a energia excedente gerada durante o dia é armazenada em baterias para ser utilizada durante a noite ou em períodos de baixa geração.";
                         } else {
-                            tp_energia = "Recomendação: Energia Solar Fotovoltaica - Opção viável para menor orçamento.";
+                            tp_energia = "O orçamento não é suficiente para instalar energia sustentável";
                         }
                     } else {
                         tp_energia = "Recomendação: Energia Solar Residencial - Ideal para residências aproveitando a alta insolação.";
@@ -107,8 +140,20 @@ public class FonteDeEnergiaBO {
                     } else if (objetivo.equalsIgnoreCase("Industrial")) {
                         if (orcamento >= 200000) {
                             tp_energia = "Recomendação: Hidroenergia (PCH) - Opção sustentável e eficiente.";
+                        } else if (consumo >= 1200 && consumo <= 1500 && orcamento >= 50000 && orcamento <= 150000){
+                            tp_energia = "Recomendação: Energia Solar Fotovoltaica - É uma das melhores opções para pequenas indústrias em todo o Brasil, incluindo São Paulo, Minas Gerais e Paraná, devido à abundância de luz solar em várias partes dessas regiões. Algumas das vantagens são: redução significativa nas contas de energia elétrica, baixo custo operacional após a instalação, e retorno sobre o investimento em 3 a 5 anos. Além disso, a energia solar é altamente escalável.";
+                        } else if (consumo >= 1200 && consumo <= 1500 && orcamento > 150000 && orcamento <= 200000){
+                            tp_energia = "Recomendação: Energia Eólica de Pequena Escala - Em regiões com boa intensidade e constância de ventos, a energia eólica pode ser uma alternativa viável. Embora a energia eólica em larga escala seja mais comum, sistemas eólicos de pequena escala estão ganhando espaço. Algumas das vantagens são: aprovaitamento dos ventos para geração de energia, especialmente em áreas mais abertas e com boa incidência de vento.";
+                        } else if (consumo >= 500000 && consumo <= 5000000 && orcamento >= 500000 && orcamento <= 5000000) {
+                            tp_energia = "Recomendação: Energia Solar Fotovoltaica - É uma excelente opção para grandes indústrias, especialmente em regiões como São Paulo, Minas Gerais e Paraná, onde há boa disponibilidade de luz solar durante todo o ano.";
+                        } else if (consumo >= 500000 && consumo <= 5000000 && orcamento >= 1000000 && orcamento <= 10000000) {
+                            tp_energia = "Recomendação: Biomassa - É uma excelente alternativa para indústrias que já possuem processos térmicos, como fábricas de papel, celulose, alimentos e bebidas. Indústrias localizadas em São Paulo, Minas Gerais e Paraná, com acesso a resíduos agrícolas (bagaço de cana, casca de arroz, resíduos de madeira, etc.), podem utilizar biomassa para gerar energia elétrica e térmica.";
+                        }  else if (consumo >= 1200 && consumo <= 1500 && orcamento >= 15000 && orcamento < 50000){
+                            tp_energia = "Recomendação: Energia Solar Fotovoltaica de Pequeno Porte - Embora o orçamento seja limitado, a energia solar fotovoltaica ainda é uma das melhores opções, especialmente para pequenas indústrias, pois ela pode reduzir consideravelmente os custos com energia elétrica a longo prazo.";
+                        }else if (consumo >= 500000 && consumo <= 5000000 && orcamento >= 200000 && orcamento < 500000) {
+                            tp_energia = "Recomendação: Energia Solar Fotovoltaica de Grande Porte - Uma das opções mais viáveis para grandes indústrias, mesmo com um orçamento de até R$ 500.000. Esse valor pode cobrir a instalação de um sistema fotovoltaico de grande porte, adequado para reduzir de forma significativa as contas de energia elétrica.";
                         } else {
-                            tp_energia = "Recomendação: Energia Solar Fotovoltaica - Opção mais econômica para indústrias.";
+                            tp_energia = "O orçamento não é suficiente para instalar energia sustentável";
                         }
                     } else {
                         tp_energia = "Recomendação: Energia Solar Residencial - Alta eficiência para áreas urbanas.";
@@ -118,31 +163,56 @@ public class FonteDeEnergiaBO {
                 case "Rio grande do sul":
                 case "Santa catarina":
                     if (objetivo.equalsIgnoreCase("Rural")) {
-                        tp_energia = "Recomendação: Energia Eólica - Aproveite o potencial de ventos na região.";
+                        tp_energia = "Recomendação: Biomassa - Utilização de resíduos florestais para geração de energia, ideal para regiões com grande produção de madeira.";
                     } else if (objetivo.equalsIgnoreCase("Industrial")) {
-                        if (orcamento >= 100000) {
-                            tp_energia = "Recomendação: Hidroenergia (PCH) - Ideal para indústrias com alto consumo.";
+                        if (orcamento >= 200000) {
+                            tp_energia = "Recomendação: Hidroenergia (PCH) - Uma opção eficiente para indústrias, aproveitando o grande potencial hidrelétrico da região.";
+                        } else if (consumo >= 1200 && consumo <= 1500 && orcamento >= 50000 && orcamento <= 150000){
+                            tp_energia = "Recomendação: Energia Solar Fotovoltaica - A energia solar é uma excelente alternativa para pequenas indústrias devido ao alto índice de radiação solar na região. O investimento inicial é acessível e o retorno ocorre em pouco tempo.";
+                        } else if (consumo >= 500000 && consumo <= 5000000 && orcamento >= 500000 && orcamento <= 5000000) {
+                            tp_energia = "Recomendação: Energia Solar Fotovoltaica - Grande opção para indústrias em regiões com alta incidência solar, garantindo uma grande economia nas contas de energia e uma operação mais sustentável.";
                         } else {
-                            tp_energia = "Recomendação: Energia Solar Fotovoltaica - Alternativa viável para menor orçamento.";
+                            tp_energia = "O orçamento não é suficiente para instalar energia sustentável.";
                         }
                     } else {
-                        tp_energia = "Recomendação: Energia Solar Residencial - Solução eficiente para residências.";
+                        tp_energia = "Recomendação: Energia Solar Residencial - Ideal para residências aproveitando o clima ameno e boa incidência solar.";
                     }
                     break;
 
                 case "Mato grosso":
                 case "Mato grosso do sul":
-                case "Goiás":
                     if (objetivo.equalsIgnoreCase("Rural")) {
-                        tp_energia = "Recomendação: Biomassa - Utilize resíduos agrícolas abundantes na região.";
+                        tp_energia = "Recomendação: Energia Solar Fotovoltaica - Região com alta incidência solar, ideal para áreas rurais onde o acesso à energia elétrica é limitado.";
                     } else if (objetivo.equalsIgnoreCase("Industrial")) {
-                        if (orcamento >= 150000)
-                            tp_energia = "Recomendação: Energia Solar Híbrida - Alta eficiência para grandes indústrias.";
-                        else {
-                            tp_energia = "Recomendação: Biomassa - Alternativa sustentável para menor orçamento.";
+                        if (orcamento >= 200000) {
+                            tp_energia = "Recomendação: Energia Solar Híbrida - Uma solução eficiente e sustentável para grandes indústrias, que combina energia solar com armazenamento em baterias, ideal para o clima quente e ensolarado do Mato Grosso e Mato Grosso do Sul.";
+                        } else if (consumo >= 1200 && consumo <= 1500 && orcamento >= 25000 && orcamento <= 50000){
+                            tp_energia = "Recomendação: Energia Solar Fotovoltaica - A energia solar é uma excelente alternativa para pequenas empresas, especialmente em áreas como o Mato Grosso e Mato Grosso do Sul, onde o sol é abundante e o sistema de geração pode ser altamente econômico.";
+                        } else if (consumo >= 500000 && consumo <= 5000000 && orcamento >= 500000 && orcamento <= 1000000) {
+                            tp_energia = "Recomendação: Energia Eólica - Ideal para grandes empresas em áreas abertas, aproveitando os ventos constantes das regiões do Centro-Oeste para gerar energia.";
+                        } else {
+                            tp_energia = "O orçamento não é suficiente para instalar energia sustentável.";
                         }
                     } else {
-                        tp_energia = "Recomendação: Energia Solar Residencial - Boa escolha para residências urbanas.";
+                        tp_energia = "Recomendação: Energia Solar Residencial - Boa opção para residências com alto potencial de geração de energia solar.";
+                    }
+                    break;
+
+                case "Goiás":
+                    if (objetivo.equalsIgnoreCase("Rural")) {
+                        tp_energia = "Recomendação: Energia Solar Fotovoltaica - A energia solar é uma excelente opção para áreas rurais, aproveitando a alta incidência de radiação solar.";
+                    } else if (objetivo.equalsIgnoreCase("Industrial")) {
+                        if (orcamento >= 150000) {
+                            tp_energia = "Recomendação: Energia Solar Híbrida - Ideal para indústrias com alta demanda energética e que buscam uma solução sustentável e econômica.";
+                        } else if (consumo >= 1200 && consumo <= 1500 && orcamento >= 25000 && orcamento <= 50000){
+                            tp_energia = "Recomendação: Energia Solar Fotovoltaica - A energia solar fotovoltaica é uma excelente escolha para empresas menores em Goiás, aproveitando a abundante luz solar da região.";
+                        } else if (consumo >= 500000 && consumo <= 5000000 && orcamento >= 200000 && orcamento <= 1000000) {
+                            tp_energia = "Recomendação: Energia Eólica - Embora Goiás tenha uma boa incidência solar, também possui um grande potencial para a geração de energia eólica em algumas áreas abertas e propensas a ventos constantes.";
+                        } else {
+                            tp_energia = "O orçamento não é suficiente para instalar energia sustentável.";
+                        }
+                    } else {
+                        tp_energia = "Recomendação: Energia Solar Residencial - Uma ótima escolha para residências, aproveitando o forte potencial solar de Goiás.";
                     }
                     break;
 
