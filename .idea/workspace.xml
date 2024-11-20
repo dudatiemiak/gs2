@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d57408d0-d18a-4948-814d-959dfe4c09df" name="Changes" comment="xml">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/exception/DadosInsuficientesException.java" afterDir="false" />
+    <list default="true" id="d57408d0-d18a-4948-814d-959dfe4c09df" name="Changes" comment="Deixando ainda mais completo as recomendações.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/bo/FonteDeEnergiaBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/bo/FonteDeEnergiaBO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -361,16 +359,58 @@
       <option name="project" value="LOCAL" />
       <updated>1731619858161</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Fazendo o tratamento de exceções do método definirRecomendacao, e melhorando o código.">
+      <option name="closed" value="true" />
+      <created>1731698204529</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1731698204529</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Adicionando tratamento de exceções no método calcularEconomia.">
+      <option name="closed" value="true" />
+      <created>1731700701138</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1731700701139</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Adicionando @NotBlank para os atributos da classe ConsultoriaTO.">
+      <option name="closed" value="true" />
+      <created>1731700834398</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1731700834398</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Tentando arrumar erro do código do método definirRecomendacao pra integrar com frontend.">
+      <option name="closed" value="true" />
+      <created>1732051049596</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1732051049596</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Teste para melhorar as recomendações e personalização do atendimento.">
+      <option name="closed" value="true" />
+      <created>1732058394576</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1732058394576</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Deixando ainda mais completo as recomendações.">
+      <option name="closed" value="true" />
+      <created>1732068680048</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1732068680048</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Métodos da classe UsuarioDAO findAll, findByCodigo, save, delete e update adicionados." />
-    <MESSAGE value="Classe UsuarioBO adicionada." />
-    <MESSAGE value="Classe UsuarioResource adicionada." />
-    <MESSAGE value="Classe CorsFilter adicionada." />
-    <MESSAGE value="Classe FonteDeEnergiaTO criada." />
-    <MESSAGE value="Classe FonteDeEnergiaDAOia criada." />
     <MESSAGE value="Classe FonteDeEnergiaBO criada." />
     <MESSAGE value="Classe FonteDeEnergiaResource criada." />
     <MESSAGE value="Classe CalculoEconomiaTO criada." />
@@ -390,6 +430,12 @@
     <MESSAGE value="Classe ConsultoriaBO adicionada." />
     <MESSAGE value="Classe ConsultoriaResource adicionada." />
     <MESSAGE value="xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="xml" />
+    <MESSAGE value="Fazendo o tratamento de exceções do método definirRecomendacao, e melhorando o código." />
+    <MESSAGE value="Adicionando tratamento de exceções no método calcularEconomia." />
+    <MESSAGE value="Adicionando @NotBlank para os atributos da classe ConsultoriaTO." />
+    <MESSAGE value="Tentando arrumar erro do código do método definirRecomendacao pra integrar com frontend." />
+    <MESSAGE value="Teste para melhorar as recomendações e personalização do atendimento." />
+    <MESSAGE value="Deixando ainda mais completo as recomendações." />
+    <option name="LAST_COMMIT_MESSAGE" value="Deixando ainda mais completo as recomendações." />
   </component>
 </project>

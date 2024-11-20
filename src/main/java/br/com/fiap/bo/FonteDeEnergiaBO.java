@@ -83,8 +83,8 @@ public class FonteDeEnergiaBO {
                     }
                     break;
 
-                case "Bahia":
-                case "Ceará":
+                case "BA":
+                case "CE":
                     if (objetivo.equalsIgnoreCase("Rural")) {
                         tp_energia = "Recomendação: Energia Eólica - Região com excelente potencial eólico.";
                     } else if (objetivo.equalsIgnoreCase("Industrial")) {
@@ -132,9 +132,9 @@ public class FonteDeEnergiaBO {
                     }
                     break;
 
-                case "São paulo":
-                case "Minas gerais":
-                case "Paraná":
+                case "SP":
+                case "MG":
+                case "PR":
                     if (objetivo.equalsIgnoreCase("Rural")) {
                         tp_energia = "Recomendação: Biomassa - Aproveite resíduos agrícolas para geração de energia.";
                     } else if (objetivo.equalsIgnoreCase("Industrial")) {
@@ -160,8 +160,8 @@ public class FonteDeEnergiaBO {
                     }
                     break;
 
-                case "Rio grande do sul":
-                case "Santa catarina":
+                case "RS":
+                case "SC":
                     if (objetivo.equalsIgnoreCase("Rural")) {
                         tp_energia = "Recomendação: Biomassa - Utilização de resíduos florestais para geração de energia, ideal para regiões com grande produção de madeira.";
                     } else if (objetivo.equalsIgnoreCase("Industrial")) {
@@ -179,8 +179,8 @@ public class FonteDeEnergiaBO {
                     }
                     break;
 
-                case "Mato grosso":
-                case "Mato grosso do sul":
+                case "MT":
+                case "MS":
                     if (objetivo.equalsIgnoreCase("Rural")) {
                         tp_energia = "Recomendação: Energia Solar Fotovoltaica - Região com alta incidência solar, ideal para áreas rurais onde o acesso à energia elétrica é limitado.";
                     } else if (objetivo.equalsIgnoreCase("Industrial")) {
@@ -198,7 +198,7 @@ public class FonteDeEnergiaBO {
                     }
                     break;
 
-                case "Goiás":
+                case "GO":
                     if (objetivo.equalsIgnoreCase("Rural")) {
                         tp_energia = "Recomendação: Energia Solar Fotovoltaica - A energia solar é uma excelente opção para áreas rurais, aproveitando a alta incidência de radiação solar.";
                     } else if (objetivo.equalsIgnoreCase("Industrial")) {
