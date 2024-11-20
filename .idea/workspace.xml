@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d57408d0-d18a-4948-814d-959dfe4c09df" name="Changes" comment="Deixando ainda mais completo as recomendações.">
+    <list default="true" id="d57408d0-d18a-4948-814d-959dfe4c09df" name="Changes" comment="Mudando o nome dos estados para sigla.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/bo/FonteDeEnergiaBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/bo/FonteDeEnergiaBO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -407,11 +408,18 @@
       <option name="project" value="LOCAL" />
       <updated>1732068680048</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Mudando o nome dos estados para sigla.">
+      <option name="closed" value="true" />
+      <created>1732074382503</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1732074382503</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Classe FonteDeEnergiaBO criada." />
     <MESSAGE value="Classe FonteDeEnergiaResource criada." />
     <MESSAGE value="Classe CalculoEconomiaTO criada." />
     <MESSAGE value="Classe CalculoEconomiaDAO criada." />
@@ -436,6 +444,7 @@
     <MESSAGE value="Tentando arrumar erro do código do método definirRecomendacao pra integrar com frontend." />
     <MESSAGE value="Teste para melhorar as recomendações e personalização do atendimento." />
     <MESSAGE value="Deixando ainda mais completo as recomendações." />
-    <option name="LAST_COMMIT_MESSAGE" value="Deixando ainda mais completo as recomendações." />
+    <MESSAGE value="Mudando o nome dos estados para sigla." />
+    <option name="LAST_COMMIT_MESSAGE" value="Mudando o nome dos estados para sigla." />
   </component>
 </project>

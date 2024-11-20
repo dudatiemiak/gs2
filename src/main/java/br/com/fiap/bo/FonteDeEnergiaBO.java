@@ -58,6 +58,7 @@ public class FonteDeEnergiaBO {
                 case "AM":
                 case "RR":
                 case "RO":
+                case "AP":
                     if (objetivo.equalsIgnoreCase("Rural")) {
                         if (orcamento >= 30000) {
                             tp_energia = "Recomendação: Energia Eólica - Ideal para áreas com ventos constantes e poucas alternativas.";
@@ -85,6 +86,7 @@ public class FonteDeEnergiaBO {
 
                 case "BA":
                 case "CE":
+                case "AL":
                     if (objetivo.equalsIgnoreCase("Rural")) {
                         tp_energia = "Recomendação: Energia Eólica - Região com excelente potencial eólico.";
                     } else if (objetivo.equalsIgnoreCase("Industrial")) {
@@ -93,7 +95,7 @@ public class FonteDeEnergiaBO {
                         } else if (consumo >= 1200 && consumo <= 1500 && orcamento >= 25000 && orcamento <= 50000){
                             tp_energia = "Recomendação: Energia Solar Fotovoltaica - Melhor opção para para pequenas empresas no Ceará e na Bahia devido à alta incidência de luz solar ao longo do ano. Essa alternativa sustentável oferece um excelente custo-benefício, permitindo uma economia significativa na conta de energia elétrica. Além disso, sistemas solares são de fácil instalação, possuem baixa manutenção e proporcionam autonomia energética, o que é fundamental para pequenas empresas que desejam reduzir custos operacionais. Com um investimento inicial acessível, variando entre R$ 25.000 e R$ 50.000, é possível garantir um retorno financeiro em poucos anos, contribuindo também para a preservação ambiental e para a valorização da marca como um negócio sustentável.";
                         } else if (consumo >= 500000 && consumo <= 5000000 && orcamento >= 200000 && orcamento <= 500000) {
-                            tp_energia = "Recomendação: Energia Solar Híbrida - Para grandes empresas localizadas na Bahia, Ceará e Rio Grande do Norte, a energia solar híbrida é a solução mais eficiente e sustentável. Essa tecnologia combina sistemas fotovoltaicos com armazenamento em baterias e, em alguns casos, integração com a rede elétrica. A energia solar híbrida é ideal para atender a grandes demandas energéticas, garantindo uma operação contínua e confiável, mesmo durante a noite ou em dias com baixa insolação.";
+                            tp_energia = "Recomendação: Energia Solar Híbrida - Para grandes empresas localizadas na Bahia, Ceará, Alagoas e Rio Grande do Norte, a energia solar híbrida é a solução mais eficiente e sustentável. Essa tecnologia combina sistemas fotovoltaicos com armazenamento em baterias e, em alguns casos, integração com a rede elétrica. A energia solar híbrida é ideal para atender a grandes demandas energéticas, garantindo uma operação contínua e confiável, mesmo durante a noite ou em dias com baixa insolação.";
                         } else if (consumo >= 500000 && consumo <= 5000000 && orcamento > 700000 && orcamento <= 3000000) {
                             tp_energia = "Recomendação: Energia Eólica - É uma excelente alternativa devido ao potencial de ventos constantes nessas regiões. Grandes parques eólicos podem atender às altas demandas energéticas de empresas industriais e comerciais, oferecendo uma solução econômica no longo prazo, com baixos custos operacionais e uma significativa redução de emissões de carbono.";
                         } else if (consumo >= 1200 && consumo <= 1500 && orcamento >= 15000 && orcamento <= 25000){
@@ -108,7 +110,7 @@ public class FonteDeEnergiaBO {
                     }
                     break;
 
-                case "Rio grande do norte":
+                case "RN":
                     if (objetivo.equalsIgnoreCase("Rural")) {
                         tp_energia = "Recomendação: Energia Eólica - Região com excelente potencial eólico.";
                     } else if (objetivo.equalsIgnoreCase("Industrial")) {
@@ -215,6 +217,184 @@ public class FonteDeEnergiaBO {
                         tp_energia = "Recomendação: Energia Solar Residencial - Uma ótima escolha para residências, aproveitando o forte potencial solar de Goiás.";
                     }
                     break;
+
+                case "RJ":
+                case "ES":
+                    if (objetivo.equalsIgnoreCase("Rural")) {
+                        tp_energia = "Recomendação: Energia Solar - Excelente para áreas rurais devido à alta insolação.";
+                    } else if (objetivo.equalsIgnoreCase("Industrial")) {
+                        if (orcamento >= 150000) {
+                            tp_energia = "Recomendação: Energia Solar Híbrida - Combina eficiência e sustentabilidade.";
+                        } else if (consumo >= 1200 && consumo <= 1500 && orcamento >= 30000 && orcamento <= 70000) {
+                            tp_energia = "Recomendação: Energia Solar Fotovoltaica - Ideal para pequenas indústrias.";
+                        } else if (consumo >= 500000 && consumo <= 5000000 && orcamento >= 300000 && orcamento <= 5000000) {
+                            tp_energia = "Recomendação: Energia Solar Fotovoltaica - Opção eficiente para grandes indústrias.";
+                        } else {
+                            tp_energia = "O orçamento não é suficiente para implementar uma solução sustentável.";
+                        }
+                    } else {
+                        tp_energia = "Recomendação: Energia Solar Residencial - Boa opção para residências com orçamento moderado.";
+                    }
+                    break;
+
+                case "PA":
+                case "TO":
+                case "MA":
+                    if (objetivo.equalsIgnoreCase("Rural")) {
+                        tp_energia = "Recomendação: Energia Solar Fotovoltaica - Melhor opção para regiões remotas com boa insolação.";
+                    } else if (objetivo.equalsIgnoreCase("Industrial")) {
+                        if (orcamento >= 150000) {
+                            tp_energia = "Recomendação: Energia Solar Híbrida - Combina eficiência e sustentabilidade.";
+                        } else if (consumo >= 1200 && consumo <= 1500 && orcamento >= 30000 && orcamento <= 70000) {
+                            tp_energia = "Recomendação: Energia Solar Fotovoltaica - Boa opção para pequenas indústrias.";
+                        } else {
+                            tp_energia = "O orçamento não é suficiente para implementar uma solução sustentável.";
+                        }
+                    } else {
+                        tp_energia = "Recomendação: Energia Solar Residencial - Boa opção para residências com orçamento moderado.";
+                    }
+                    break;
+
+                case "DF":
+                    if (objetivo.equalsIgnoreCase("Rural")) {
+                        if (orcamento >= 20000) {
+                            tp_energia = "Recomendação: Energia Solar Fotovoltaica - Ideal para propriedades rurais no DF, aproveitando a alta incidência solar e permitindo redução de custos a longo prazo.";
+                        } else {
+                            tp_energia = "Recomendação: Energia Solar Residencial de Pequeno Porte - Alternativa econômica para propriedades rurais com menor demanda energética e orçamento limitado.";
+                        }
+                    } else if (objetivo.equalsIgnoreCase("Industrial")) {
+                        if (orcamento >= 100000) {
+                            tp_energia = "Recomendação: Energia Solar Híbrida - Combinação de energia solar com armazenamento para indústrias de médio a grande porte, garantindo fornecimento constante e sustentável.";
+                        } else if (consumo >= 1200 && consumo <= 1500 && orcamento >= 25000 && orcamento <= 50000) {
+                            tp_energia = "Recomendação: Energia Solar Fotovoltaica - Alternativa eficiente para pequenas empresas no Distrito Federal, especialmente em áreas urbanas com alta demanda e orçamento moderado.";
+                        } else if (consumo >= 500000 && consumo <= 5000000 && orcamento >= 200000 && orcamento <= 500000) {
+                            tp_energia = "Recomendação: Energia Solar Híbrida - Uma solução robusta e sustentável para indústrias com grande consumo energético.";
+                        } else {
+                            tp_energia = "O orçamento não é suficiente para implementar energia sustentável no contexto industrial.";
+                        }
+                    } else {
+                        if (orcamento >= 15000) {
+                            tp_energia = "Recomendação: Energia Solar Residencial - Excelente opção para residências no DF, aproveitando a alta insolação e gerando economia significativa na conta de energia elétrica.";
+                        } else {
+                            tp_energia = "Recomendação: Energia Solar de Pequeno Porte - Para residências com menor orçamento, ainda é possível instalar um sistema básico de energia solar.";
+                        }
+                    }
+                    break;
+
+                case "PB":
+                    if (objetivo.equalsIgnoreCase("Rural")) {
+                        if (orcamento >= 20000) {
+                            tp_energia = "Recomendação: Energia Solar Fotovoltaica Off-Grid - Ideal para áreas rurais remotas da Paraíba, sem acesso à rede elétrica, aproveitando a abundância de luz solar.";
+                        } else {
+                            tp_energia = "Recomendação: Energia Solar Residencial Básica - Para propriedades rurais com menor orçamento, um sistema básico pode atender demandas de iluminação e pequenos aparelhos.";
+                        }
+                    } else if (objetivo.equalsIgnoreCase("Industrial")) {
+                        if (orcamento >= 80000) {
+                            tp_energia = "Recomendação: Energia Solar Híbrida - Excelente para pequenas e médias indústrias urbanas ou rurais na Paraíba, garantindo eficiência energética e sustentabilidade.";
+                        } else if (consumo >= 1000 && consumo <= 5000 && orcamento >= 30000 && orcamento <= 60000) {
+                            tp_energia = "Recomendação: Energia Solar Fotovoltaica Conectada à Rede - Ideal para pequenas indústrias urbanas com orçamento moderado.";
+                        } else {
+                            tp_energia = "O orçamento não é suficiente para implementar energia sustentável no contexto industrial.";
+                        }
+                    } else {
+                        if (orcamento >= 15000) {
+                            tp_energia = "Recomendação: Energia Solar Residencial - Ótima opção para residências urbanas ou rurais na Paraíba, aproveitando o alto índice de insolação para reduzir custos na conta de luz.";
+                        } else {
+                            tp_energia = "Recomendação: Energia Solar Residencial Compacta - Para residências com orçamento reduzido, é possível instalar um sistema compacto que atenda às necessidades básicas.";
+                        }
+                    }
+                    break;
+
+                case "PE":
+                    if (objetivo.equalsIgnoreCase("Rural")) {
+                        if (orcamento >= 25000) {
+                            tp_energia = "Recomendação: Energia Solar Fotovoltaica Off-Grid - Ideal para propriedades rurais no interior pernambucano, aproveitando a alta insolação e permitindo independência energética.";
+                        } else {
+                            tp_energia = "Recomendação: Energia Solar Residencial Básica - Um sistema compacto pode atender às demandas essenciais em áreas rurais, considerando o orçamento limitado.";
+                        }
+                    } else if (objetivo.equalsIgnoreCase("Industrial")) {
+                        if (orcamento >= 100000) {
+                            tp_energia = "Recomendação: Energia Solar Híbrida - Ideal para indústrias em polos econômicos como Suape, permitindo uso eficiente de energia solar e da rede elétrica.";
+                        } else if (consumo >= 1500 && consumo <= 5000 && orcamento >= 40000) {
+                            tp_energia = "Recomendação: Energia Solar Conectada à Rede - Excelente para indústrias de pequeno e médio porte, principalmente no litoral, reduzindo custos com alta eficiência.";
+                        } else {
+                            tp_energia = "O orçamento não é suficiente para implementar energia sustentável no setor industrial.";
+                        }
+                    } else if (objetivo.equalsIgnoreCase("Comercial")) {
+                        if (orcamento >= 50000) {
+                            tp_energia = "Recomendação: Energia Solar para Estabelecimentos Comerciais - Perfeito para hotéis, pousadas e comércios no litoral, aproveitando a alta densidade solar para atrair economia e sustentabilidade.";
+                        } else {
+                            tp_energia = "Recomendação: Energia Solar Compacta para Pequenos Negócios - Para comércios menores, é possível implementar sistemas compactos que atendam às demandas básicas.";
+                        }
+                    } else {
+                        if (orcamento >= 20000) {
+                            tp_energia = "Recomendação: Energia Solar Residencial - Uma solução ideal para residências urbanas ou litorâneas, considerando o potencial de redução nos custos com energia.";
+                        } else {
+                            tp_energia = "Recomendação: Energia Solar Residencial Básica - Um sistema simples pode ser instalado para reduzir o consumo de energia da rede, considerando o orçamento reduzido.";
+                        }
+                    }
+                    break;
+
+                case "PI":
+                    if (objetivo.equalsIgnoreCase("Rural")) {
+                        if (orcamento >= 20000) {
+                            tp_energia = "Recomendação: Energia Solar Fotovoltaica Off-Grid - Excelente para áreas rurais isoladas, aproveitando a alta insolação para garantir energia autônoma.";
+                        } else {
+                            tp_energia = "Recomendação: Energia Solar Básica com Bateria - Ideal para atender necessidades básicas em áreas rurais com orçamento limitado.";
+                        }
+                    } else if (objetivo.equalsIgnoreCase("Industrial")) {
+                        if (orcamento >= 80000) {
+                            tp_energia = "Recomendação: Energia Solar Conectada à Rede - Ideal para indústrias em crescimento no estado, reduzindo custos operacionais e aumentando a eficiência.";
+                        } else if (orcamento >= 50000 && consumo >= 1500) {
+                            tp_energia = "Recomendação: Energia Solar Híbrida - Adequada para pequenas indústrias com consumo médio-alto, oferecendo maior confiabilidade energética.";
+                        } else {
+                            tp_energia = "O orçamento não é suficiente para implementar energia sustentável no setor industrial.";
+                        }
+                    } else if (objetivo.equalsIgnoreCase("Comercial")) {
+                        if (orcamento >= 40000) {
+                            tp_energia = "Recomendação: Energia Solar para Estabelecimentos Comerciais - Perfeito para lojas, hotéis e serviços no estado, aproveitando a economia gerada pela energia renovável.";
+                        } else {
+                            tp_energia = "Recomendação: Energia Solar Compacta para Pequenos Negócios - Um sistema acessível que pode atender comércios menores e reduzir custos.";
+                        }
+                    } else {
+                        if (orcamento >= 15000) {
+                            tp_energia = "Recomendação: Energia Solar Residencial - Uma solução ideal para famílias urbanas e rurais no Piauí, aproveitando o potencial solar e reduzindo custos de energia.";
+                        } else {
+                            tp_energia = "Recomendação: Energia Solar Residencial Básica - Sistemas compactos podem ser instalados para atender necessidades energéticas essenciais.";
+                        }
+                    }
+                    break;
+
+                case "SE":
+                    if (objetivo.equalsIgnoreCase("Rural")) {
+                        if (orcamento >= 18000) {
+                            tp_energia = "Recomendação: Energia Solar Off-Grid - Perfeito para propriedades rurais no interior, permitindo autossuficiência energética em áreas remotas.";
+                        } else {
+                            tp_energia = "Recomendação: Energia Solar Compacta com Bateria - Ideal para pequenas propriedades rurais com necessidades energéticas básicas.";
+                        }
+                    } else if (objetivo.equalsIgnoreCase("Industrial")) {
+                        if (orcamento >= 70000) {
+                            tp_energia = "Recomendação: Energia Solar Conectada à Rede - Uma ótima opção para indústrias em Sergipe, especialmente em polos urbanos e áreas industriais.";
+                        } else if (orcamento >= 45000 && consumo >= 1400) {
+                            tp_energia = "Recomendação: Energia Solar Híbrida - Ideal para pequenas indústrias no estado, reduzindo custos e oferecendo maior confiabilidade.";
+                        } else {
+                            tp_energia = "O orçamento é insuficiente para implementar um sistema sustentável no setor industrial.";
+                        }
+                    } else if (objetivo.equalsIgnoreCase("Comercial")) {
+                        if (orcamento >= 35000) {
+                            tp_energia = "Recomendação: Energia Solar para Pequenos e Médios Negócios - Excelente para lojas e serviços que desejam economia e sustentabilidade.";
+                        } else {
+                            tp_energia = "Recomendação: Energia Solar Básica para Comércio - Ideal para pequenos negócios que desejam economizar e contribuir com o meio ambiente.";
+                        }
+                    } else {
+                        if (orcamento >= 14000) {
+                            tp_energia = "Recomendação: Energia Solar Residencial - Solução viável para famílias urbanas e rurais, aproveitando a alta incidência solar e reduzindo custos de energia.";
+                        } else {
+                            tp_energia = "Recomendação: Energia Solar Residencial Compacta - Um sistema simples para atender às necessidades básicas de consumo.";
+                        }
+                    }
+                    break;
+
 
                 default:
                     throw new IllegalArgumentException("Estado não reconhecido. Por favor, verifique o nome do estado.");
